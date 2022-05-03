@@ -4,7 +4,6 @@ function createField () {
   
   const container = document.getElementById('container');
 
-  container.className = 'container'
   container.style.gridTemplateRows = `repeat(${sizeField}, 1fr)`
   container.style.gridTemplateColumns = `repeat(${sizeField}, 1fr)`
   
@@ -20,4 +19,14 @@ function createField () {
 
     container.appendChild(div)
   }  
+}
+
+createField()
+
+function restart () {
+  let div = document.getElementsByClassName('partField')
+  while(div[0]) {
+    div[0].remove()
+  }
+  createField()
 }
